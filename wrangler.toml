@@ -5,9 +5,8 @@ compatibility_date = "2024-08-29"
 [durable_objects]
 bindings = [ { name = "STATE_MANAGER", class_name = "StateManager" } ]
 
-[[migrations]]
-tag = "v1"
-new_classes = ["StateManager"]
+# Esta es la bandera para saltarnos la restricción del plan gratuito.
+durable_objects_beta_unstable_do_not_use_in_production = true
 
 [vars]
 AGENT1_URL = "https://telegram-furancho-agente-1.sociobot.workers.dev"
