@@ -1,0 +1,14 @@
+name = "telegram-FURANCHO-orquestador"
+main = "src/worker.js"
+compatibility_date = "2024-08-29"
+
+[durable_objects]
+bindings = [ { name = "STATE_MANAGER", class_name = "StateManager" } ]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["StateManager"]
+
+[vars]
+AGENT1_URL = "URL_DEL_WORKER_AGENTE_1" # <-- La URL de https://telegram-FURANCHO-agente-1...
+AGENT2_URL = "URL_DEL_WORKER_AGENTE_2" # <-- La URL de https://telegram-FURANCHO-agente-2...
