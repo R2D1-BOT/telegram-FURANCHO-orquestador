@@ -10,5 +10,5 @@ tag = "v1"
 new_classes = ["StateManager"]
 
 [vars]
-AGENT1_URL = "URL_DEL_WORKER_AGENTE_1" # <-- La URL de https://telegram-FURANCHO-agente-1...
-AGENT2_URL = "URL_DEL_WORKER_AGENTE_2" # <-- La URL de https://telegram-FURANCHO-agente-2...
+AGENT1_URL = "https://telegram-furancho-agente-1.sociobot.workers.dev"
+AGENT2_URL = "https://telegram-furancho-agente-2.sociobot.workers.dev"
