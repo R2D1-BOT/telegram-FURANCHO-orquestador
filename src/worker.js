@@ -31,7 +31,7 @@ export default {
       if (freeAgent) {
         await env.AGENTS_KV.put(freeAgent.status_key, "busy", { expirationTtl: 180 });
         const taskPayload = { telegramPayload: payload, agentId: freeAgent.id };
-        ctx.waitUntil(fetch(freeAgent.url, {
+        const response = await fetch(freeAgent.url, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(taskPayload),
